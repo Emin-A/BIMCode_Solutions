@@ -5,9 +5,9 @@ export default function ProductsSection() {
   return (
     <section
       id="pricing"
-      className="bg-gradient-to-b from-white via-slate-50/60 to-white py-18 dark:from-slate-950 dark:via-slate-900/80 dark:to-slate-950"
+      className="light-section py-24"
     >
-      <div className="section-container flex flex-col gap-10">
+      <div className="section-container flex flex-col gap-14">
         <div className="flex flex-col gap-4 text-left md:flex-row md:items-end md:justify-between">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.4em] text-brand-500 dark:text-brand-300">
@@ -30,13 +30,13 @@ export default function ProductsSection() {
           {products.map((product) => (
             <article
               key={product.name}
-              className={`flex h-full flex-col gap-3 bg-transparent p-2 transition hover:-translate-y-1 ${product.highlight ? "md:pl-6" : "md:pl-6"}`}
+              className="flex h-full flex-col gap-3 bg-transparent p-4 md:p-6 transition hover:-translate-y-1"
             >
               <div className="flex items-center justify-between gap-4">
                 <h3 className="text-lg font-semibold text-slate-900 dark:text-white">
                   {product.name}
                 </h3>
-                <span className="bg-slate-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-slate-600 dark:bg-slate-800 dark:text-slate-200">
+                <span className="bg-slate-200 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-slate-700 dark:bg-[#4f6a7d] dark:text-white">
                   {product.price}
                 </span>
               </div>

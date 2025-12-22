@@ -10,11 +10,13 @@ export default function HomePage() {
   return (
     <>
       <HeroSection />
+      <div className="section-divider" aria-hidden="true" />
       <ProductDemoSection />
       <BenefitsSection />
       <ProductsSection />
       <CustomizationSection />
       <AboutSection />
+      <div className="section-divider" aria-hidden="true" />
       <ContactSection />
     </>
   );

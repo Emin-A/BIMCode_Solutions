@@ -27,7 +27,7 @@ export default function Footer() {
             href="https://www.youtube.com/@BIMCodeSolutions25"
             target="_blank"
             rel="noreferrer"
-            className="transition hover:text-brand-500 dark:hover:text-brand-300"
+            className="transition hover:text-[#4f6a7d] dark:hover:text-[#9bb6c9]"
           >
             YouTube
           </a>
@@ -35,21 +35,29 @@ export default function Footer() {
             href="https://www.instagram.com/bimcode_solutions_"
             target="_blank"
             rel="noreferrer"
-            className="transition hover:text-brand-500 dark:hover:text-brand-300"
+            className="transition hover:text-[#4f6a7d] dark:hover:text-[#9bb6c9]"
           >
             Instagram
+          </a>
+          <a
+            href="https://x.com/bimcodesolution"
+            target="_blank"
+            rel="noreferrer"
+            className="transition hover:text-[#4f6a7d] dark:hover:text-[#9bb6c9]"
+          >
+            X
           </a>
           <a
             href="https://www.tiktok.com/@bimcodesolutions"
             target="_blank"
             rel="noreferrer"
-            className="transition hover:text-brand-500 dark:hover:text-brand-300"
+            className="transition hover:text-[#4f6a7d] dark:hover:text-[#9bb6c9]"
           >
             TikTok
           </a>
           <a
             href="mailto:bimcodesolutions@gmail.com"
-            className="transition hover:text-brand-500 dark:hover:text-brand-300"
+            className="transition hover:text-[#4f6a7d] dark:hover:text-[#9bb6c9]"
           >
             bimcodesolutions@gmail.com
           </a>

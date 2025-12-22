@@ -2,7 +2,7 @@ export default function ProductDemoSection() {
   return (
     <section
       id="demo"
-      className="bg-gradient-to-b from-slate-50 via-white to-slate-100/60 py-16 dark:from-slate-950 dark:via-slate-900 dark:to-slate-900"
+      className="light-section py-24"
     >
       <div className="section-container grid gap-10 lg:grid-cols-[1.2fr,0.8fr]">
         <div className="space-y-4">

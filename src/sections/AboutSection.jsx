@@ -2,7 +2,7 @@ import photo from "../assets/me.jpg";
 
 export default function AboutSection() {
   return (
-    <section id="about" className="bg-white py-16 dark:bg-slate-950">
+    <section id="about" className="light-section bg-white py-20 dark:bg-slate-950">
       <div className="section-container grid gap-10 lg:grid-cols-[1.1fr,0.9fr]">
         <div className="space-y-4">
           <p className="text-sm font-semibold uppercase tracking-[0.35em] text-brand-500 dark:text-brand-300">

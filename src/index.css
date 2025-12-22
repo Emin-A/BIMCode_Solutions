@@ -82,23 +82,47 @@
   }
 
   .btn-primary {
-    @apply rounded-none bg-brand-600 text-white transition transform duration-200 ease-out hover:-translate-y-[2px] hover:shadow-lg hover:bg-brand-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500;
-    @apply dark:text-white;
-    background-color: theme("colors.brand.600");
-    color: white;
+    @apply rounded-none text-white transition transform duration-200 ease-out hover:-translate-y-[2px] hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500;
+    background-color: #4f6a7d;
   }
 
-  .btn-primary.dark,
+  .btn-primary:hover {
+    background-color: #5f7d92;
+  }
+
   .dark .btn-primary {
     background-color: #4f6a7d;
   }
 
-  .btn-primary.dark:hover,
   .dark .btn-primary:hover {
     background-color: #5f7d92;
   }
 
   .btn-ghost {
-    @apply rounded-none border border-slate-200 text-slate-700 transition transform duration-200 ease-out hover:-translate-y-[2px] hover:border-brand-400 hover:text-brand-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500 dark:border-slate-600 dark:text-slate-100 dark:hover:border-brand-400 dark:hover:text-brand-200;
+    @apply rounded-none border border-slate-300 text-slate-700 transition transform duration-200 ease-out hover:-translate-y-[2px] hover:border-brand-400 hover:text-brand-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500 dark:border-slate-600 dark:text-slate-100 dark:hover:border-brand-400 dark:hover:text-brand-200;
+  }
+
+  .light-section {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .light-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(79, 106, 125, 0.08), rgba(79, 106, 125, 0.02));
+    pointer-events: none;
+  }
+
+  .dark .light-section::before {
+    background: transparent;
+  }
+
+  .section-divider {
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(90deg, #4f6a7d, #3f6fae);
+    opacity: 0.85;
   }
 }

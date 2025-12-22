@@ -46,7 +46,7 @@ export default function Header() {
               <a
                 key={item.label}
                 href={item.to}
-                className="px-3 py-2 transition hover:text-brand-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500 dark:hover:text-brand-300"
+                className="px-3 py-2 transition hover:text-[#4f6a7d] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500 dark:hover:text-[#9bb6c9]"
               >
                 {item.label}
               </a>
@@ -59,7 +59,7 @@ export default function Header() {
                     "px-3 py-2 transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500",
                     isActive
                       ? "text-brand-600 dark:text-brand-300"
-                      : "hover:text-brand-500 dark:hover:text-brand-300",
+                      : "hover:text-[#4f6a7d] dark:hover:text-[#9bb6c9]",
                   ].join(" ")
                 }
               >

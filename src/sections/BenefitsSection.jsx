@@ -4,7 +4,7 @@ export default function BenefitsSection() {
   return (
     <section
       id="benefits"
-      className="bg-white py-16 dark:bg-slate-950"
+      className="light-section bg-white py-16 dark:bg-slate-950"
     >
       <div className="section-container space-y-10">
         <div className="flex flex-col gap-3">
