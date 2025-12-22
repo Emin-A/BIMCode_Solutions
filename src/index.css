@@ -10,13 +10,24 @@
   }
 
   body {
-    @apply bg-white text-slate-900 transition-colors duration-300 ease-out;
+    @apply bg-white text-slate-900 transition-colors duration-500 ease-out;
     font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
       sans-serif;
+    background-color: #f5f6f7;
+    background-image:
+      radial-gradient(circle at 20% 20%, rgba(63, 111, 174, 0.08), transparent 26%),
+      radial-gradient(circle at 80% 0%, rgba(104, 148, 197, 0.08), transparent 30%),
+      linear-gradient(180deg, #f7f7f5 0%, #eef1f6 40%, #f7f7f5 75%);
+    background-attachment: fixed;
   }
 
   body.dark {
     @apply bg-slate-950 text-slate-100;
+    background-color: #2b3338; /* gunmetal */
+    background-image:
+      radial-gradient(circle at 20% 20%, rgba(43, 51, 56, 0.7), transparent 42%),
+      radial-gradient(circle at 80% 0%, rgba(36, 43, 48, 0.6), transparent 48%);
+    background-attachment: fixed;
   }
 }
 
@@ -51,5 +62,43 @@
 
   .animate-marquee {
     animation: marquee 18s linear infinite;
+  }
+
+  .card-visual {
+    @apply relative overflow-hidden rounded-2xl;
+    background-image: linear-gradient(135deg, rgba(63, 111, 174, 0.15), rgba(63, 111, 174, 0.45));
+  }
+
+  .card-visual::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.45), transparent 50%);
+    opacity: 0.6;
+  }
+
+  .card-visual img {
+    filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.2));
+  }
+
+  .btn-primary {
+    @apply rounded-none bg-brand-600 text-white transition transform duration-200 ease-out hover:-translate-y-[2px] hover:shadow-lg hover:bg-brand-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500;
+    @apply dark:text-white;
+    background-color: theme("colors.brand.600");
+    color: white;
+  }
+
+  .btn-primary.dark,
+  .dark .btn-primary {
+    background-color: #4f6a7d;
+  }
+
+  .btn-primary.dark:hover,
+  .dark .btn-primary:hover {
+    background-color: #5f7d92;
+  }
+
+  .btn-ghost {
+    @apply rounded-none border border-slate-200 text-slate-700 transition transform duration-200 ease-out hover:-translate-y-[2px] hover:border-brand-400 hover:text-brand-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500 dark:border-slate-600 dark:text-slate-100 dark:hover:border-brand-400 dark:hover:text-brand-200;
   }
 }

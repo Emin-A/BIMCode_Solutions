@@ -1,0 +1,75 @@
+import { ArrowUpRight } from "lucide-react";
+import { products } from "../data/content.js";
+
+export default function ProductsSection() {
+  return (
+    <section
+      id="pricing"
+      className="bg-gradient-to-b from-white via-slate-50/60 to-white py-18 dark:from-slate-950 dark:via-slate-900/80 dark:to-slate-950"
+    >
+      <div className="section-container flex flex-col gap-10">
+        <div className="flex flex-col gap-4 text-left md:flex-row md:items-end md:justify-between">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.4em] text-brand-500 dark:text-brand-300">
+              Pricing & Buy
+            </p>
+            <h2 className="mt-2 text-3xl font-semibold text-slate-900 dark:text-white md:text-4xl">
+              Revit-ready automation built for engineering teams.
+            </h2>
+            <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">
+              All solutions are production-tested and delivered by the same engineer who designs them.
+            </p>
+          </div>
+          <p className="max-w-xl text-sm text-slate-600 dark:text-slate-300">
+            Curated tools that ship with implementation guidance. Buy off the
+            shelf or talk with us to tailor each pack to your standards and
+            delivery cadence.
+          </p>
+        </div>
+        <div className="grid gap-10 divide-y divide-slate-200/60 md:grid-cols-3 md:divide-y-0 md:divide-x dark:divide-slate-800/60">
+          {products.map((product) => (
+            <article
+              key={product.name}
+              className={`flex h-full flex-col gap-3 bg-transparent p-2 transition hover:-translate-y-1 ${product.highlight ? "md:pl-6" : "md:pl-6"}`}
+            >
+              <div className="flex items-center justify-between gap-4">
+                <h3 className="text-lg font-semibold text-slate-900 dark:text-white">
+                  {product.name}
+                </h3>
+                <span className="bg-slate-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-slate-600 dark:bg-slate-800 dark:text-slate-200">
+                  {product.price}
+                </span>
+              </div>
+              <p className="mt-3 text-sm text-slate-600 dark:text-slate-300">
+                {product.description}
+              </p>
+              <ul className="mt-4 space-y-2 text-sm text-slate-600 dark:text-slate-300">
+                {product.features.map((feature) => (
+                  <li key={feature} className="flex items-start gap-2">
+                    <span className="mt-[6px] h-1.5 w-1.5 rounded-none bg-brand-500" />
+                    <span>{feature}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-auto pt-6">
+                <div className="flex items-center gap-3">
+                  <button className="btn-primary flex-1 px-4 py-3 text-sm font-semibold uppercase tracking-[0.2em]">
+                    {product.name.includes("Starter")
+                      ? "Get starter automation"
+                      : product.name.includes("Compliance")
+                        ? "Explore compliance engine"
+                        : "Request AI copilot access"}
+                  </button>
+                  <button className="inline-flex h-11 w-11 items-center justify-center rounded-none border border-slate-200 text-slate-600 transition transform duration-200 hover:-translate-y-[2px] hover:border-brand-400 hover:text-brand-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500 dark:border-slate-700 dark:text-slate-300 dark:hover:border-brand-400 dark:hover:text-brand-200">
+                    <ArrowUpRight className="h-4 w-4" />
+                    <span className="sr-only">Learn more</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

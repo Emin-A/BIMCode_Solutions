@@ -28,7 +28,7 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="bg-white py-20 transition dark:bg-slate-950"
+      className="bg-gradient-to-b from-white via-slate-50/70 to-white py-20 transition dark:from-slate-950 dark:via-slate-900/80 dark:to-slate-950"
     >
       <div className="section-container grid gap-12 lg:grid-cols-[1.1fr,0.9fr]">
         <div>
@@ -36,15 +36,14 @@ export default function ContactSection() {
             Contact
           </p>
           <h2 className="mt-3 text-3xl font-semibold text-slate-900 dark:text-white md:text-4xl">
-            Tell us about your workflow, your challenges, and where you want to
-            go next.
+            Tell us about your workflow—and where automation should help.
           </h2>
           <p className="mt-4 text-base text-slate-600 dark:text-slate-300">
             Whether you need a targeted Dynamo script, a full automation
             roadmap, or you want to join our team of specialists, drop us a
             note. We tailor every engagement around tangible metrics.
           </p>
-          <div className="mt-8 grid gap-6 rounded-3xl border border-slate-200/60 bg-slate-50/70 p-6 text-sm text-slate-600 shadow-sm dark:border-slate-800/60 dark:bg-slate-900/70 dark:text-slate-300">
+          <div className="mt-8 grid gap-6 rounded-3xl border border-slate-200/60 bg-white/80 p-6 text-sm text-slate-600 shadow-lg dark:border-slate-800/60 dark:bg-slate-900/80 dark:text-slate-300">
             <div>
               <div className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500 dark:text-slate-400">
                 Response Window
@@ -61,21 +60,21 @@ export default function ContactSection() {
                 Preferred Channels
               </div>
               <p className="mt-2">
-                hello@bimcodesolutions.com · +1 (347) 555-2411 · Teams / Zoom
+                bimcodesolutions@gmail.com · Python/AI automation · Remote delivery
               </p>
             </div>
           </div>
         </div>
         <form
           onSubmit={handleSubmit}
-          className="rounded-3xl border border-slate-200/60 bg-white/80 p-8 shadow-xl transition dark:border-slate-800/60 dark:bg-slate-950/80"
+          className="rounded-3xl border border-slate-200/60 bg-white/90 p-8 shadow-2xl shadow-brand-200/40 ring-1 ring-brand-100 transition dark:border-slate-800/60 dark:bg-slate-950/90 dark:shadow-brand-500/20 dark:ring-brand-500/30"
         >
-          <fieldset className="grid grid-cols-2 gap-3 rounded-2xl border border-slate-200/70 bg-slate-50/50 p-2 text-sm font-semibold text-slate-500 dark:border-slate-800/70 dark:bg-slate-900/40 dark:text-slate-300">
+          <fieldset className="grid grid-cols-2 gap-3 rounded-2xl bg-gradient-to-r from-brand-50 via-white to-slate-50 p-2 text-sm font-semibold text-slate-600 shadow-inner dark:from-slate-900 dark:via-slate-950 dark:to-slate-900 dark:text-slate-200">
             <label
               className={`cursor-pointer rounded-xl px-4 py-3 text-center transition ${
                 form.intent === "business"
-                  ? "bg-white text-brand-600 shadow-sm dark:bg-slate-950 dark:text-brand-300"
-                  : ""
+                  ? "bg-brand-600 text-white shadow-lg shadow-brand-500/40"
+                  : "bg-white text-slate-700 hover:bg-brand-50 dark:bg-slate-900 dark:text-slate-200 dark:hover:bg-slate-800"
               }`}
             >
               <input
@@ -91,8 +90,8 @@ export default function ContactSection() {
             <label
               className={`cursor-pointer rounded-xl px-4 py-3 text-center transition ${
                 form.intent === "career"
-                  ? "bg-white text-brand-600 shadow-sm dark:bg-slate-950 dark:text-brand-300"
-                  : ""
+                  ? "bg-brand-500 text-white shadow-lg shadow-brand-400/40"
+                  : "bg-white text-slate-700 hover:bg-brand-50 dark:bg-slate-900 dark:text-slate-200 dark:hover:bg-slate-800"
               }`}
             >
               <input
@@ -175,9 +174,9 @@ export default function ContactSection() {
           </div>
           <button
             type="submit"
-            className="mt-6 w-full rounded-full bg-brand-600 px-6 py-3 text-sm font-semibold uppercase tracking-[0.3em] text-white transition hover:bg-brand-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500 dark:bg-brand-500 dark:hover:bg-brand-400"
+            className="btn-primary mt-6 w-full px-6 py-3 text-sm font-semibold uppercase tracking-[0.3em]"
           >
-            Send message
+            Start a conversation
           </button>
           {status && (
             <p className="mt-4 text-center text-sm text-brand-600 dark:text-brand-300">

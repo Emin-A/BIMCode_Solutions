@@ -1,18 +1,20 @@
 import HeroSection from "../sections/HeroSection.jsx";
-import ProcessSection from "../sections/ProcessSection.jsx";
-import ProjectsShowcase from "../sections/ProjectsShowcase.jsx";
-import TestimonialsPreview from "../sections/TestimonialsPreview.jsx";
-import LogosSection from "../sections/LogosSection.jsx";
+import ProductDemoSection from "../sections/ProductDemoSection.jsx";
+import BenefitsSection from "../sections/BenefitsSection.jsx";
+import ProductsSection from "../sections/ProductsSection.jsx";
+import CustomizationSection from "../sections/CustomizationSection.jsx";
+import AboutSection from "../sections/AboutSection.jsx";
 import ContactSection from "../sections/ContactSection.jsx";
 
 export default function HomePage() {
   return (
     <>
       <HeroSection />
-      <ProcessSection />
-      <ProjectsShowcase />
-      <TestimonialsPreview />
-      <LogosSection />
+      <ProductDemoSection />
+      <BenefitsSection />
+      <ProductsSection />
+      <CustomizationSection />
+      <AboutSection />
       <ContactSection />
     </>
   );

@@ -1,9 +1,8 @@
 import { Route, Routes } from "react-router-dom";
 import Layout from "./components/Layout.jsx";
 import HomePage from "./pages/HomePage.jsx";
-import ProjectsPage from "./pages/ProjectsPage.jsx";
-import ProjectDetailPage from "./pages/ProjectDetailPage.jsx";
-import TestimonialsPage from "./pages/TestimonialsPage.jsx";
+import ProductsPage from "./pages/ProductsPage.jsx";
+import BlogPage from "./pages/BlogPage.jsx";
 import NotFoundPage from "./pages/NotFoundPage.jsx";
 
 export default function App() {
@@ -11,9 +10,8 @@ export default function App() {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<HomePage />} />
-        <Route path="projects" element={<ProjectsPage />} />
-        <Route path="projects/:projectId" element={<ProjectDetailPage />} />
-        <Route path="testimonials" element={<TestimonialsPage />} />
+        <Route path="products" element={<ProductsPage />} />
+        <Route path="blog" element={<BlogPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Route>
     </Routes>

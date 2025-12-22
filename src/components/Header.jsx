@@ -1,13 +1,13 @@
 import { NavLink, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import ThemeToggle from "./ThemeToggle.jsx";
-import logo from "../assets/logo.svg";
+import logoPng from "../assets/Logo BIMCode Solutions 4 Final.png";
 
 const navItems = [
-  { label: "Home", to: "/" },
-  { label: "Process", to: "/#process" },
-  { label: "Projects", to: "/projects" },
-  { label: "Testimonials", to: "/testimonials" },
+  { label: "Products", to: "/products" },
+  { label: "Pricing", to: "/#pricing" },
+  { label: "About", to: "/#about" },
+  { label: "Blog", to: "/blog" },
 ];
 
 export default function Header() {
@@ -27,17 +27,17 @@ export default function Header() {
       <div className="section-container flex items-center justify-between py-4">
         <NavLink to="/" className="flex items-center gap-3">
           <img
-            src={logo}
+            src={logoPng}
             alt="BIMCode Solutions logo"
             className="h-10 w-10 rounded-xl border border-slate-200 shadow-sm dark:border-slate-700"
           />
-          <div className="flex flex-col leading-none text-sm font-semibold uppercase tracking-[0.2em] text-slate-600 dark:text-slate-300">
-            <span className="text-xl font-bold tracking-[0.16em] text-slate-900 dark:text-slate-100">
-              BIMCODE
+          <div className="leading-tight text-sm font-semibold tracking-[0.08em] text-slate-700 dark:text-slate-200">
+            <span className="text-lg font-bold text-slate-900 dark:text-slate-100">
+              BIMCode <span className="font-semibold text-slate-600 dark:text-slate-300">Solutions</span>
             </span>
-            <span className="text-xs text-slate-500 dark:text-slate-400">
-              SOLUTIONS
-            </span>
+            <div className="text-[11px] font-normal text-slate-500 dark:text-slate-400">
+              Revit + Python + AI automation
+            </div>
           </div>
         </NavLink>
         <nav className="hidden items-center gap-6 text-sm font-medium text-slate-600 md:flex dark:text-slate-300">
@@ -46,7 +46,7 @@ export default function Header() {
               <a
                 key={item.label}
                 href={item.to}
-                className="rounded-full px-3 py-2 transition hover:text-brand-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500 dark:hover:text-brand-300"
+                className="px-3 py-2 transition hover:text-brand-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500 dark:hover:text-brand-300"
               >
                 {item.label}
               </a>
@@ -56,7 +56,7 @@ export default function Header() {
                 to={item.to}
                 className={({ isActive }) =>
                   [
-                    "rounded-full px-3 py-2 transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500",
+                    "px-3 py-2 transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500",
                     isActive
                       ? "text-brand-600 dark:text-brand-300"
                       : "hover:text-brand-500 dark:hover:text-brand-300",
@@ -69,7 +69,7 @@ export default function Header() {
           )}
           <a
             href="/#contact"
-            className="rounded-full bg-brand-600 px-3 py-2 font-semibold text-white transition hover:bg-brand-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500 dark:bg-brand-500 dark:hover:bg-brand-400"
+            className="px-3 py-2 text-sm font-semibold text-slate-700 transition hover:text-brand-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500 dark:text-slate-200 dark:hover:text-brand-300"
           >
             Contact
           </a>
