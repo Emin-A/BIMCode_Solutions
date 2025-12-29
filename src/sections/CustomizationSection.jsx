@@ -31,9 +31,12 @@ export default function CustomizationSection() {
               <p className="text-sm text-slate-600 dark:text-slate-300">
                 {service.description}
               </p>
-              <button className="btn-primary mt-auto w-full px-6 py-3 text-xs font-semibold uppercase tracking-[0.25em]">
+              <a
+                href="/#contact"
+                className="btn-primary mt-auto block w-full px-6 py-3 text-center text-xs font-semibold uppercase tracking-[0.25em]"
+              >
                 Talk to us
-              </button>
+              </a>
             </article>
           ))}
         </div>

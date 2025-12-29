@@ -33,7 +33,7 @@ export default function ProductDemoSection() {
           <div className="relative aspect-video w-full">
             <iframe
               title="BIMCode Solutions demo"
-              src="https://www.youtube.com/embed/5Peo-ivmupE"
+              src="https://www.youtube.com/embed/IUdbeoPnSf8"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
               className="h-full w-full"
